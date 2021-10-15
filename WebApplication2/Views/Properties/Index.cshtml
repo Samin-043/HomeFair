@@ -1,0 +1,188 @@
+﻿@model IEnumerable<WebApplication2.Models.Property>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<style>
+    .h3, h3 {
+        font-size: 1.75rem;
+        color: black;
+    }
+
+    .h2, h2 {
+        font-size: 2rem;
+        color: black;
+    }
+
+    .navbar-nav > li > a {
+        padding: 4px;
+        color: currentcolor;
+        padding: 5px;
+        padding-right: 15px;
+    }
+
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 11px;
+        letter-spacing: 5px;
+        font-family: system-ui;
+    }
+</style>
+
+
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    @Html.ActionLink("HomeFair", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <!--<li>@Html.ActionLink("Home", "Index", "Home")</li>-->
+            <li>@Html.ActionLink("ABOUTUS", "About", "Home")</li>
+            <li><a href="/Properties/Details">PROPERTIES</a></li>
+            <li>@Html.ActionLink("CONTACTUS", "Contact", "Home")</li>
+
+        </ul>
+    </div>
+    <div class="login_Show">
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <!--<i class="houzez-icon icon-single-neutral-circle"></i>-->
+                <a href="/Logins/Create" class="btn btn-outline-info">Login</a>
+            </li>
+
+        </ul>
+    </div>
+
+</nav>
+
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    @Html.ActionLink("HomeFair", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <!--<li>@Html.ActionLink("Home", "Index", "Home")</li>-->
+            <li>@Html.ActionLink("ABOUTUS", "About", "Home")</li>
+            <li><a href="/Properties/Details">PROPERTIES</a></li>
+            <li><a href="/Contects/create">CONTACTUS</a></li>
+            <li><a href="/Agents/create">POSTPROPERTY</a></li>
+
+        </ul>
+    </div>
+    <div class="login_Show">
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <!--<i class="houzez-icon icon-single-neutral-circle"></i>-->
+                <a href="/Logins/Create" class="btn btn-outline-info">ACCOUNT</a>
+            </li>
+
+        </ul>
+    </div>
+
+
+</nav>
+
+
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.Purpose)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.PropertySize)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FloorNo)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Agent.AgentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyType.PropertyTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyImage)
+        </th>
+
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purpose)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertySize)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.FloorNo)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Agent.AgentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyType.PropertyTypeName)
+            </td>
+
+            <td>
+                <img src="@Url.Content(item.PropertyImage)" width="100" height="100" />
+            </td>
+
+            <td>
+                <!--Html.ActionLink("Edit", "Edit", new { id = item.Property_Id }) | Html.ActionLink("Details", "Details", new { id = item.Property_Id })-->
+                @Html.ActionLink("View", "View", new { id = item.Property_Id })
+            </td>
+        </tr>
+
+    }
+
+</table>
+
+
+
+<div class="container-fluid bg-2 text-center">
+    <h3 class="margin">Welcome in HomeFair</h3>
+    <p>HomeFair is a uniqe palce for buying property sale,rent and also for show.</p>
+
+    <footer class="container-fluid bg-4 text-center">
+        <p>Our team always with you...</p>
+    </footer>
+</div>

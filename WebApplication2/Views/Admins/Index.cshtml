@@ -1,0 +1,112 @@
+﻿@model IEnumerable<WebApplication2.Models.Admin>
+
+@{
+    ViewBag.Title = "Admin Panel";
+}
+
+<style>
+    .h2, h2 {
+        font-size: 2rem;
+        color: black;
+    }
+
+    .navbar-nav > li > a {
+        padding: 4px;
+        color: currentcolor;
+        padding: 5px;
+        padding-right: 15px;
+    }
+
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 11px;
+        letter-spacing: 5px;
+        font-family: system-ui;
+    }
+</style>
+
+
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    @Html.ActionLink("HomeFair", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <!--<li>@Html.ActionLink("Home", "Index", "Home")</li>-->
+            <li>@Html.ActionLink("ABOUTUS", "About", "Home")</li>
+            <li><a href="/Properties/Details">PROPERTIES</a></li>
+            <li><a href="/Contects/create">CONTACTUS</a></li>
+            <li><a href="/Agents/create">POSTPROPERTY</a></li>
+
+        </ul>
+    </div>
+    <div class="login_Show">
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <!--<i class="houzez-icon icon-single-neutral-circle"></i>-->
+                <a href="/Logins/Create" class="btn btn-outline-info">ACCOUNT</a>
+            </li>
+
+        </ul>
+    </div>
+
+
+</nav>
+
+
+<h2>Welcome in Admin area</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Admin_Id })
+
+
+            </td>
+        </tr>
+    }
+</table>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c59f342feeb94e468114693d9a980110" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="abcModel1.Admin" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel1.Agent" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel1.Contect" Width="1.5" PointX="7.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel1.Customer" Width="1.5" PointX="7.5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel1.Login" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel1.Property" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel1.PropertyType" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel1.Register" Width="1.5" PointX="5.25" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel1.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="abcModel1.FK__Contect__Admin_i__214BF109" ManuallyRouted="false" />
+        <AssociationConnector Association="abcModel1.FK__Customer__Admin___2CBDA3B5" ManuallyRouted="false" />
+        <AssociationConnector Association="abcModel1.FK__Logins__Admin_id__3FD07829" ManuallyRouted="false" />
+        <AssociationConnector Association="abcModel1.FK__Property__Agent___09746778" ManuallyRouted="false" />
+        <AssociationConnector Association="abcModel1.FK__PropertyT__Agent__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="abcModel1.FK__Customer__Proper__1E6F845E" ManuallyRouted="false" />
+        <AssociationConnector Association="abcModel1.FK__Property__Proper__0A688BB1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

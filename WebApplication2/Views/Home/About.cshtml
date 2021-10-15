@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "ABOUT US";
+}
+
+<style>
+    /*.h3, h3 {
+        font-size: 1.75rem;
+        color: black;
+    }
+
+    .h2, h2 {
+        font-size: 2rem;
+        color: black;
+    }*/
+
+    body {
+        background-color: gray;
+    }
+
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: antiquewhite;
+    }
+
+    .text-center {
+        font-size: 14px;
+        color: aqua;
+    }
+
+    .navbar-nav > li > a {
+        padding: 4px;
+        color: currentcolor;
+        padding: 5px;
+        padding-right: 15px;
+    }
+
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 11px;
+        letter-spacing: 5px;
+        font-family: system-ui;
+    }
+</style>
+
+
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    @Html.ActionLink("HomeFair", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <!--<li>@Html.ActionLink("Home", "Index", "Home")</li>-->
+            <li>@Html.ActionLink("ABOUTUS", "About", "Home")</li>
+            <li><a href="/Properties/Details">PROPERTIES</a></li>
+            <li><a href="/Contects/create">CONTACTUS</a></li>
+            <li><a href="/Agents/create">POSTPROPERTY</a></li>
+
+        </ul>
+    </div>
+    <div class="login_Show">
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <!--<i class="houzez-icon icon-single-neutral-circle"></i>-->
+                <a href="/Logins/Create" class="btn btn-outline-info">ACCOUNT</a>
+            </li>
+
+        </ul>
+    </div>
+
+
+</nav>
+
+
+<div class="container bg-dark">
+
+    <img src="https://assets.unenvironment.org/styles/article_billboard_image/s3/2020-12/london-3833039_1920.jpg?VersionId=null&amp;h=8644ad1d&amp;itok=Puh-QkW9" style="width:100%" />
+    <div class="centered">
+
+        <h1 class="heading">About us</h1>
+        <p class="text-center">
+            HomeFair is an independent team within Building technology & ideas ltd. HomeFair and acts as a networking platform for its large database of client consisting of interested buyers and sellers. It is a one-stop solution for all your real estate needs, be it buying, selling and renting properties of bti through which our clients can sell their property at an attractive price.
+
+            Building technology & ideas ltd. HomeFair is a leading real estate company with more than 36 years of experience in the real estate sector of Bangladesh and is known for its trustworthiness, commitment, and excellent customer service. The HomeFair team of the company was formed with an aim to offer professional services and act as a reliable intermediary between the buyers and sellers for hassle-free property buying and selling. We have a well-trained sales team who can provide the right guidance for selling or renting the properties at the right price. We also have a huge customer base that is on the lookout for properties in Dhaka.
+
+            For those looking to buy a flat, we have a vast collection of prime properties for sale in Dhaka. At HomeFair, we value the trust you place in us and therefore, before dealing we ensure that both the buyer and seller are genuine so that you can rest assured that you are in safe hands whether you are buying or selling a property through HomeFair.
+        </p>
+    </div>
+
+
+</div>
+
+
+<div class="container-fluid bg-2 text-center">
+    <h3 class="margin">Welcome in HomeFair</h3>
+    <p>HomeFair is a uniqe palce for buying property sale,rent and also for show.</p>
+
+    <footer class="container-fluid bg-4 text-center">
+        <p>Our team always with you...</p>
+    </footer>
+</div>
+
+
+<!--<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>-->

@@ -1,0 +1,181 @@
+﻿@model WebApplication2.Models.Admin
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<style>
+
+    .h4, h4 {
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    .h2, h2 {
+        font-size: 2rem;
+        text-align: center;
+        padding: 20px;
+        color: deeppink;
+    }
+
+    .form-group {
+        padding: 4px;
+        font-size: 14px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .col-md-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 66.333333%;
+    }
+
+    button, input, optgroup, select, textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        width: inherit;
+    }
+
+    .col-md-offset-2 {
+        width: inherit;
+        font-size: large;
+    }
+
+    .show-image {
+        padding: 20px;
+        width: 100%;
+        height: 500px;
+    }
+</style>
+
+
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    @Html.ActionLink("HomeFair", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <!--<li>@Html.ActionLink("Home", "Index", "Home")</li>-->
+            <li>@Html.ActionLink("ABOUTUS", "About", "Home")</li>
+            <li><a href="/Properties/Details">PROPERTIES</a></li>
+            <li><a href="/Contects/create">CONTACTUS</a></li>
+            <li><a href="/Agents/create">POSTPROPERTY</a></li>
+
+        </ul>
+    </div>
+    <div class="login_Show">
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <!--<i class="houzez-icon icon-single-neutral-circle"></i>-->
+                <a href="/Logins/Create" class="btn btn-outline-info">ACCOUNT</a>
+            </li>
+
+        </ul>
+    </div>
+
+
+</nav>
+
+
+<h2>Create</h2>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-6 col-md-12">
+            <img src="~/Content/back_property_1.gif" height="550" width="650" />
+        </div>
+        <div class="col-lg-6 col-md-12">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Admin</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <!--<div class="form-group">
+                        @Html.LabelFor(model => model.Admin_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Admin_Id, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Admin_Id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>-->
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            <!--<input type="password" class="form-control"  placeholder="Password">-->
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            <!--<input type="email" class="form-control" placeholder="Enter email">-->
+                            <!--<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">-->
+                            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger" })
+                            <!--<input type="tel" class="form-control" required>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-default" />
+                        </div>
+                    </div>
+                    
+                </div>
+
+            }
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

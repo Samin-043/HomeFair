@@ -1,0 +1,53 @@
+﻿@model WebApplication2.Models.Agent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Agent</h4>
+    <hr />
+</div>
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.AgentName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.AgentName)
+    </dd>
+
+    
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Email)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Email)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Address)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Address)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Contact)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Contact)
+    </dd>
+
+</dl>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Agent_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

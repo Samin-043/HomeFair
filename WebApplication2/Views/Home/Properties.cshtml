@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<style>
+    .h3, h3 {
+        font-size: 1.75rem;
+        color: black;
+    }
+
+    .h2, h2 {
+        font-size: 2rem;
+        color: black;
+    }
+</style>
+
+
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    @Html.ActionLink("HomeFair", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <!--<li>@Html.ActionLink("Properties", "Index", "Properties")</li>-->
+            <li><a href="/Properties/Details">Properties</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+

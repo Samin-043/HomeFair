@@ -1,0 +1,329 @@
+﻿@model IEnumerable<WebApplication2.Models.Agent>
+
+@{
+    ViewBag.Title = "Agent";
+}
+
+<style>
+    body {
+        /*background-color: #6c757d05;*/
+        background-color: white;
+    }
+
+    .img-responsive {
+        width: 100%;
+    }
+
+    h4 {
+        font-size:25px;
+        padding:5px;
+        padding-left: 600px;
+        color: black;
+    }
+
+    p {
+        color: black;
+    }
+</style>
+
+
+
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    @Html.ActionLink("HomeFair", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <!--<li>@Html.ActionLink("Home", "Index", "Home")</li>-->
+            <li>@Html.ActionLink("ABOUTUS", "About", "Home")</li>
+            <li><a href="/Properties/Details">PROPERTIES</a></li>
+            <li><a href="/Contects/create">CONTACTUS</a></li>
+            <li><a href="/Agents/create">POSTPROPERTY</a></li>
+
+        </ul>
+    </div>
+    <div class="login_Show">
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <!--<i class="houzez-icon icon-single-neutral-circle"></i>-->
+                <a href="/Logins/Create" class="btn btn-outline-info">ACCOUNT</a>
+            </li>
+
+        </ul>
+    </div>
+
+
+</nav>
+
+<h4>Agent List</h4>
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="https://btibrokeragebd.com/wp-content/uploads/2021/08/abdur-rouf-408816.jpg" class="img-responsive" />
+
+            </div>
+
+            <div>
+                <h2><a href="/Agents/View/200">RAKIB</a></h2>
+
+                <p>
+                    <b>Agent ID:</b>
+                    200
+                </p>
+                <p>
+                    <b>Date of Joining:</b>
+                    27/5/2019
+                </p>
+                <p>
+                    <b>Contact:</b>
+
+                    01345699999
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="https://btibrokeragebd.com/wp-content/uploads/2020/12/imam-hossain-231437-1024x1024.jpg" class="img-responsive" />
+
+            </div>
+            <div>
+                <h2><a href="/Agents/View/201">Tuhin</a></h2>
+
+                <p>
+                    <b>Agent ID:</b>
+                    201
+                </p>
+                <p>
+                    <b>Date of Joining:</b>
+                    13/6/2019
+                </p>
+                <p>
+                    <b>Contact:</b>
+                    01345677777
+                </p>
+
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="https://btibrokeragebd.com/wp-content/uploads/2021/08/limon-mia-513129.jpg" class="img-responsive" />
+
+            </div>
+            <div>
+                <h2><a href="/Agents/View/203">Akram</a></h2>
+
+                <p>
+                    <b>Agent ID:</b>
+                    203
+                </p>
+                <p>
+                    <b>Date of Joining:</b>
+                    15/6/2019
+                </p>
+                <p>
+                    <b>Contact:</b>
+                    01345678888
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="https://btibrokeragebd.com/wp-content/uploads/2020/12/imtiaz-ahmed-296714-1024x1024.jpg" class="img-responsive" />
+
+            </div>
+
+            <div>
+                <h2><a href="/Agents/View/204">Asif</a></h2>
+
+                <p>
+                    <b>Agent ID:</b>
+                    204
+                </p>
+                <p>
+                    <b>Date of Joining:</b>
+                    25/6/2019
+                </p>
+                <p>
+                    <b>Contact:</b>
+                    01345688888
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="https://btibrokeragebd.com/wp-content/uploads/2021/08/md-mamunul-islam-663929.jpg" class="img-responsive" />
+
+            </div>
+
+            <div>
+                <h2><a href="/Agents/View/205">Rahim</a></h2>
+
+                <p>
+                    <b>Agent ID:</b>
+                    205
+                </p>
+                <p>
+                    <b>Date of Joining:</b>
+                    3/7/2019
+                </p>
+                <p>
+                    <b>Contact:</b>
+                    01915697999
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="https://btibrokeragebd.com/wp-content/uploads/2021/05/mr-md-mahmudul-haque-569048.jpg" class="img-responsive" />
+
+            </div>
+
+            <div>
+
+                <h2><a href="/Agents/View/206">Masfi</a></h2>
+                <p>
+                    <b>Agent ID:</b>
+                    206
+                </p>
+                <p>
+                    <b>Date of Joining:</b>
+                    10/7/2019
+                </p>
+                <p>
+                    <b>Contact:</b>
+                    01889526234
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="https://btibrokeragebd.com/wp-content/uploads/2021/08/rezwan-rahman-337792.jpg" class="img-responsive" />
+
+            </div>
+            <div>
+                <h2><a href="/Agents/View/207">Kamal</a></h2>
+
+                <p>
+                    <b>Agent ID:</b>
+                    207
+                </p>
+                <p>
+                    <b>Date of Joining:</b>
+                    20/7/2019
+                </p>
+                <p>
+                    <b>Contact:</b>
+                    01716557100
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image">
+                <img src="https://btibrokeragebd.com/wp-content/uploads/2021/08/md-nahid-munshi-647092.jpg" class="img-responsive" />
+
+            </div>
+
+            <div>
+                <h2><a href="/Agents/View/217">Tomal</a></h2>
+
+                <p>
+                    <b>Agent ID:</b>
+                    217
+                </p>
+                <p>
+                    <b>Date of Joining:</b>
+                    27/7/2019
+                </p>
+                <p>
+                    <b>Contact:</b>
+                    01523476533
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AgentName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.ActionLink("View", "View", new { id = item.Agent_Id })
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="container-fluid bg-2 text-center">
+    <h3 class="margin">Welcome in HomeFair</h3>
+    <p>HomeFair is a uniqe palce for buying property sale,rent and also for show.</p>
+
+    <footer class="container-fluid bg-4 text-center">
+        <p>Our team always with you...</p>
+    </footer>
+</div>

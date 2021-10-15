@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f22d3e69a81c4cc98d77de87758ee519" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="abcModel.Admin" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel.Agent" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel.Property" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel.PropertyType" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="abcModel.sysdiagram" Width="1.5" PointX="9.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="abcModel.FK__Property__Agent___398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="abcModel.FK__PropertyT__Agent__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="abcModel.FK__Property__Proper__38996AB5" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="abcModel.Login" Width="1.5" PointX="4" PointY="0.625" />
+        <EntityTypeShape EntityType="abcModel.Register" Width="1.5" PointX="7" PointY="0.75" />
+        <EntityTypeShape EntityType="abcModel.Customer" Width="1.5" PointX="7.5" PointY="11.625" />
+        <AssociationConnector Association="abcModel.FK__Customer__Proper__1B9317B3" />
+        <EntityTypeShape EntityType="abcModel.Contect" Width="1.5" PointX="5.375" PointY="3.75" />
+        <AssociationConnector Association="abcModel.FK__Contect__Admin_i__214BF109" />
+        <AssociationConnector Association="abcModel.FK__Customer__Admin___2CBDA3B5" />
+        <AssociationConnector Association="abcModel.FK__Logins__Admin_id__3FD07829" />
+        <AssociationConnector Association="abcModel.FK__Logins__Password__40C49C62" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
