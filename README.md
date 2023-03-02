@@ -1,4 +1,4 @@
-About HomeFair: 
+# About HomeFair: 
 
 Home Fair is the software application developed for real state company.The main purpose to develop this project
 to resolve the issue of both buyer and seller. The seller can submit the property what he/she wants to sale with
